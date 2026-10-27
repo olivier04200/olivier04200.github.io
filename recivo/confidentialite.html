@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recivo — Politique de confidentialité</title>
+<meta name="description" content="Politique de confidentialité de l'application Recivo : aucune collecte de données, stockage 100 % local.">
+<style>
+  :root { --ink: #2b2430; --sub: #6b6372; --accent: #7c5fb0; --bg: #faf8fc; --card: #ffffff; --border: #e8e2ef; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #ece7f2; --sub: #a79fb3; --accent: #b9a3e3; --bg: #17131c; --card: #201a28; --border: #352c42; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { text-align: center; margin-bottom: 28px; }
+  header .logo { font-size: 44px; }
+  h1 { font-size: 26px; margin: 8px 0 4px; }
+  .sub { color: var(--sub); font-size: 14px; }
+  nav.lang { text-align: center; margin: 18px 0 8px; font-size: 14px; }
+  nav.lang a { color: var(--accent); text-decoration: none; font-weight: 600; margin: 0 10px; }
+  section.card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 22px; margin-top: 22px; }
+  h2 { font-size: 20px; margin: 0 0 6px; }
+  h3 { font-size: 16px; margin: 22px 0 6px; color: var(--accent); }
+  p, li { font-size: 15px; }
+  ul { padding-left: 20px; }
+  .muted { color: var(--sub); font-size: 13px; }
+  a { color: var(--accent); }
+  .tldr { background: color-mix(in srgb, var(--accent) 10%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 10px; padding: 12px 14px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="logo">🍽️</div>
+  <h1>Recivo</h1>
+  <div class="sub">Politique de confidentialité · Privacy Policy</div>
+  <nav class="lang"><a href="#fr">Français</a> · <a href="#en">English</a></nav>
+</header>
+
+<!-- ────────────────────────── FRANÇAIS ────────────────────────── -->
+<section class="card" id="fr">
+  <h2>🇫🇷 Politique de confidentialité</h2>
+  <p class="muted">Application : Recivo (com.recivo.app) · Dernière mise à jour : 26 octobre 2026</p>
+
+  <p class="tldr">En bref : Recivo ne collecte aucune donnée. Pas de compte, pas de statistiques, pas de publicité, pas de serveur. Tout reste sur ton appareil.</p>
+
+  <h3>1. Qui sommes-nous ?</h3>
+  <p>Recivo est une application mobile de gestion de recettes développée par un développeur indépendant. Contact : <a href="mailto:app-recivo@proton.me">app-recivo@proton.me</a>.</p>
+
+  <h3>2. Données collectées par le développeur : aucune</h3>
+  <p>Recivo ne collecte, ne transmet et ne partage <strong>aucune donnée personnelle</strong>. L'application fonctionne sans compte utilisateur, n'intègre aucun outil de mesure d'audience, aucune publicité, et le développeur n'exploite <strong>aucun serveur</strong> : rien de ce que tu fais dans Recivo ne lui parvient.</p>
+
+  <h3>3. Données stockées sur ton appareil</h3>
+  <p>Tout ce que tu crées dans Recivo est stocké localement, sur ton appareil uniquement :</p>
+  <ul>
+    <li>tes recettes, photos, catégories, sous-catégories et étiquettes ;</li>
+    <li>tes listes de courses, ton planning de la semaine, ton garde-manger ;</li>
+    <li>ton journal de cuisine (notes, compteurs), tes thèmes et préférences ;</li>
+    <li>si tu en configures une : ta clé API d'intelligence artificielle, stockée <strong>chiffrée</strong> dans le coffre sécurisé du système (Android Keystore).</li>
+  </ul>
+  <p>Ces données ne quittent l'appareil que si <em>tu</em> le décides : export JSON, sauvegarde dans le dossier de ton choix, impression, partage ou QR code.</p>
+
+  <h3>4. Connexions réseau sortantes</h3>
+  <p>Recivo n'effectue des requêtes Internet (toujours en HTTPS) que dans deux cas, déclenchés par toi :</p>
+  <ul>
+    <li><strong>Import d'une recette</strong> : l'application télécharge la page ou l'image publique du lien que tu partages, directement depuis ton appareil.</li>
+    <li><strong>Fonctions d'IA (optionnelles)</strong> : si tu configures ta propre clé API, le contenu à analyser (texte du lien, photo de recette, PDF, recette à traduire) est envoyé directement au fournisseur que tu as choisi — Google Gemini, Anthropic Claude, Mistral AI ou OpenAI — avec ta clé. Ces échanges sont régis par la politique de confidentialité du fournisseur choisi. Sans clé configurée, aucun appel d'IA n'a lieu et le reste de l'application fonctionne normalement.</li>
+  </ul>
+  <p>Aucune de ces requêtes ne transite par un serveur du développeur (il n'en existe pas).</p>
+
+  <h3>5. Partage entre appareils</h3>
+  <p>Le partage de recettes et de listes de courses par QR code s'effectue de téléphone à téléphone : les données voyagent dans le QR code lui-même, sans Internet ni intermédiaire.</p>
+
+  <h3>6. Permissions utilisées</h3>
+  <ul>
+    <li><strong>Caméra</strong> : photographier une recette, scanner un QR code.</li>
+    <li><strong>Photos / galerie</strong> : illustrer tes recettes.</li>
+    <li><strong>Alarmes</strong> : lancer un minuteur de cuisson.</li>
+    <li><strong>Accès à un dossier (au choix)</strong> : y écrire tes sauvegardes.</li>
+  </ul>
+  <p>Chaque permission n'est demandée qu'au moment où la fonction est utilisée.</p>
+
+  <h3>7. Tes droits et la suppression des données</h3>
+  <p>Tes données étant exclusivement locales, tu en as la maîtrise totale : tu peux les consulter, les exporter et les supprimer dans l'application, et la désinstallation de Recivo efface tout ce qu'elle stockait. Le développeur ne détenant aucune donnée te concernant, aucune demande d'accès ou d'effacement (RGPD) n'est nécessaire — il n'y a rien à effacer de son côté. Pour toute question : <a href="mailto:app-recivo@proton.me">app-recivo@proton.me</a>.</p>
+
+  <h3>8. Enfants</h3>
+  <p>Recivo ne s'adresse pas spécifiquement aux enfants et ne collecte de données sur personne, enfants compris.</p>
+
+  <h3>9. Dons</h3>
+  <p>Recivo est gratuit. Un lien de don facultatif (PayPal) ouvre le site de PayPal dans ton navigateur ; l'application n'accède à aucune information de paiement.</p>
+
+  <h3>10. Évolutions de cette politique</h3>
+  <p>Si l'application évoluait d'une manière qui touche à la confidentialité (par exemple une sauvegarde cloud optionnelle), cette page serait mise à jour avant la publication de la version concernée, et le changement serait explicite dans l'application.</p>
+</section>
+
+<!-- ────────────────────────── ENGLISH ────────────────────────── -->
+<section class="card" id="en" lang="en">
+  <h2>🇬🇧 Privacy Policy</h2>
+  <p class="muted">App: Recivo (com.recivo.app) · Last updated: October 26, 2026</p>
+
+  <p class="tldr">In short: Recivo collects no data. No account, no analytics, no ads, no server. Everything stays on your device.</p>
+
+  <h3>1. Who we are</h3>
+  <p>Recivo is a recipe management mobile app built by an independent developer. Contact: <a href="mailto:app-recivo@proton.me">app-recivo@proton.me</a>.</p>
+
+  <h3>2. Data collected by the developer: none</h3>
+  <p>Recivo does not collect, transmit or share <strong>any personal data</strong>. The app works without a user account, embeds no analytics and no advertising, and the developer operates <strong>no server</strong>: nothing you do in Recivo ever reaches them.</p>
+
+  <h3>3. Data stored on your device</h3>
+  <p>Everything you create in Recivo is stored locally, on your device only:</p>
+  <ul>
+    <li>your recipes, photos, categories, subcategories and tags;</li>
+    <li>your shopping lists, weekly meal plan and pantry;</li>
+    <li>your cooking journal (ratings, counters), themes and preferences;</li>
+    <li>if you set one up: your artificial-intelligence API key, stored <strong>encrypted</strong> in the system's secure vault (Android Keystore).</li>
+  </ul>
+  <p>This data only leaves the device when <em>you</em> decide: JSON export, backup to a folder of your choice, printing, sharing or QR code.</p>
+
+  <h3>4. Outgoing network connections</h3>
+  <p>Recivo makes Internet requests (always HTTPS) in only two cases, both triggered by you:</p>
+  <ul>
+    <li><strong>Importing a recipe</strong>: the app fetches the public page or image of the link you share, directly from your device.</li>
+    <li><strong>AI features (optional)</strong>: if you configure your own API key, the content to analyse (link text, recipe photo, PDF, recipe to translate) is sent directly to the provider you chose — Google Gemini, Anthropic Claude, Mistral AI or OpenAI — using your key. These exchanges are governed by the chosen provider's privacy policy. Without a key, no AI call is made and the rest of the app works normally.</li>
+  </ul>
+  <p>None of these requests go through any developer-operated server (there is none).</p>
+
+  <h3>5. Device-to-device sharing</h3>
+  <p>Sharing recipes and shopping lists via QR code happens phone to phone: the data travels inside the QR code itself, with no Internet and no intermediary.</p>
+
+  <h3>6. Permissions used</h3>
+  <ul>
+    <li><strong>Camera</strong>: photograph a recipe, scan a QR code.</li>
+    <li><strong>Photos / gallery</strong>: illustrate your recipes.</li>
+    <li><strong>Alarms</strong>: start a cooking timer.</li>
+    <li><strong>Folder access (your choice)</strong>: write your backups there.</li>
+  </ul>
+  <p>Each permission is requested only when the related feature is used.</p>
+
+  <h3>7. Your rights and data deletion</h3>
+  <p>Since your data is exclusively local, you have full control: you can view, export and delete it within the app, and uninstalling Recivo erases everything it stored. As the developer holds no data about you, no access or erasure request (GDPR) is needed — there is nothing to erase on their side. Questions: <a href="mailto:app-recivo@proton.me">app-recivo@proton.me</a>.</p>
+
+  <h3>8. Children</h3>
+  <p>Recivo is not specifically aimed at children and collects data about no one, children included.</p>
+
+  <h3>9. Donations</h3>
+  <p>Recivo is free. An optional donation link (PayPal) opens PayPal's website in your browser; the app accesses no payment information.</p>
+
+  <h3>10. Changes to this policy</h3>
+  <p>Should the app evolve in a way that affects privacy (for example an optional cloud backup), this page would be updated before the relevant version ships, and the change would be made explicit in the app.</p>
+</section>
+
+<p class="muted" style="text-align:center; margin-top: 26px;">Recivo · <a href="mailto:app-recivo@proton.me">app-recivo@proton.me</a></p>
+
+</div>
+</body>
+</html>

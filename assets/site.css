@@ -1,0 +1,120 @@
+/* Site des apps d'Olivier — la palette et la rondeur viennent de Recivo. */
+:root {
+  --bg: #F2EDF9;
+  --surface: #FFFFFF;
+  --ink: #2B2430;
+  --sub: #6F6680;
+  --violet: #7C5FB0;
+  --framboise: #C13BA4;
+  --mint: #A8D5C2;
+  --border: #E5DCF0;
+  --radius: 18px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171221;
+    --surface: #211A2E;
+    --ink: #EDE7F5;
+    --sub: #A79DB8;
+    --violet: #B49BE0;
+    --framboise: #E072C8;
+    --mint: #7FB8A2;
+    --border: #372C4A;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+
+/* ── Barre haute ── */
+.top { display: flex; align-items: center; gap: 10px; padding: 18px 0; }
+.top img { width: 34px; height: 34px; border-radius: 9px; }
+.top a { color: var(--ink); text-decoration: none; font-weight: 800; font-size: 19px; }
+.top nav { margin-left: auto; display: flex; gap: 18px; }
+.top nav a { font-weight: 600; font-size: 15px; color: var(--sub); }
+.top nav a:hover { color: var(--violet); }
+/* En étroit, la barre garde logo + nom ; les ancres vivent dans la page */
+@media (max-width: 560px) { .top nav { display: none; } }
+
+h1, h2 { line-height: 1.15; margin: 0 0 14px; font-weight: 800; }
+h1 { font-size: clamp(34px, 5.5vw, 52px); letter-spacing: -0.5px; }
+h2 { font-size: clamp(24px, 3.4vw, 32px); }
+p { margin: 0 0 14px; max-width: 64ch; }
+.lead { font-size: 19px; color: var(--sub); }
+a { color: var(--violet); }
+:focus-visible { outline: 3px solid var(--framboise); outline-offset: 2px; border-radius: 6px; }
+
+.btn {
+  display: inline-block; background: var(--violet); color: #fff;
+  font-weight: 800; text-decoration: none; padding: 13px 26px;
+  border-radius: 999px; font-size: 16px;
+}
+.btn:hover { background: var(--framboise); }
+.btn.ghost { background: transparent; color: var(--violet); border: 2px solid var(--violet); }
+.btn.ghost:hover { color: var(--framboise); border-color: var(--framboise); background: transparent; }
+
+section { padding: 44px 0; }
+footer { padding: 36px 0 48px; color: var(--sub); font-size: 14px; border-top: 1px solid var(--border); margin-top: 30px; }
+footer a { color: var(--sub); }
+
+/* ── Accueil : les deux apps ── */
+.hero-home { text-align: center; padding: 64px 0 30px; }
+.hero-home img { width: 96px; height: 96px; border-radius: 24px; margin-bottom: 18px; }
+.apps { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; padding: 26px 0 10px; }
+@media (max-width: 720px) { .apps { grid-template-columns: 1fr; } }
+.app-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px; text-decoration: none; color: var(--ink);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.app-card:hover { border-color: var(--violet); }
+.app-card .head { display: flex; align-items: center; gap: 14px; }
+.app-card .head img, .app-card .head .glyph {
+  width: 56px; height: 56px; border-radius: 14px; flex: none;
+  display: grid; place-items: center; font-size: 30px; background: var(--bg);
+}
+.app-card h2 { margin: 0; font-size: 24px; }
+.app-card .state { font-size: 14px; color: var(--sub); font-weight: 600; }
+.app-card p { color: var(--sub); margin: 0; }
+.app-card.soon { opacity: 0.85; }
+.app-card .go { color: var(--violet); font-weight: 800; }
+
+/* ── Page app : héros ── */
+.hero-app { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 36px; align-items: center; padding: 40px 0 10px; }
+@media (max-width: 760px) { .hero-app { grid-template-columns: 1fr; } }
+.hero-app .phone {
+  width: min(300px, 80%); justify-self: center;
+  border-radius: 26px; border: 1px solid var(--border);
+  box-shadow: 0 18px 50px rgba(60, 35, 100, 0.22);
+}
+.hero-app .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+
+/* ── La rangée de captures ── */
+.reel { display: flex; gap: 16px; overflow-x: auto; padding: 8px 4px 18px; scroll-snap-type: x proximity; }
+.reel figure { margin: 0; flex: none; scroll-snap-align: start; }
+.reel img { width: 215px; border-radius: 18px; border: 1px solid var(--border); display: block; }
+.reel figcaption { font-size: 13.5px; color: var(--sub); text-align: center; padding-top: 7px; font-weight: 600; }
+
+/* ── Fonctionnalités ── */
+.feats { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 36px; padding: 0; margin: 0; list-style: none; }
+@media (max-width: 720px) { .feats { grid-template-columns: 1fr; } }
+.feats li { padding: 10px 0; border-bottom: 1px dashed var(--border); }
+.feats b { display: block; font-size: 17px; }
+.feats span { color: var(--sub); font-size: 15.5px; }
+
+/* ── Vidéo & confiance ── */
+video { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
+.trust {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 26px 28px;
+}
+.trust p:last-child { margin-bottom: 0; }

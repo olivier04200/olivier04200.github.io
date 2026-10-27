@@ -3,39 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Olivier — Applications</title>
-<meta name="description" content="Les applications mobiles d'Olivier : Recivo, et les suivantes.">
-<style>
-  :root { --ink: #2b2430; --sub: #6b6372; --accent: #7c5fb0; --bg: #faf8fc; --card: #ffffff; --border: #e8e2ef; }
-  @media (prefers-color-scheme: dark) {
-    :root { --ink: #ece7f2; --sub: #a79fb3; --accent: #b9a3e3; --bg: #17131c; --card: #201a28; --border: #352c42; }
-  }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  .wrap { max-width: 640px; margin: 0 auto; padding: 48px 16px; text-align: center; }
-  h1 { font-size: 26px; margin: 10px 0 4px; }
-  .sub { color: var(--sub); font-size: 14px; margin-bottom: 30px; }
-  a.app { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin: 14px 0; text-decoration: none; color: var(--ink); transition: transform .1s; }
-  a.app:hover { transform: translateY(-2px); }
-  .emoji { font-size: 36px; }
-  .name { font-weight: 700; font-size: 18px; margin-top: 4px; }
-  .desc { color: var(--sub); font-size: 14px; }
-  .links { font-size: 13px; margin-top: 8px; color: var(--accent); }
-</style>
+<title>Les apps d'Olivier — Recivo & Kartino</title>
+<meta name="description" content="Des applications mobiles indépendantes, gratuites, sans pub et sans collecte de données : Recivo (recettes) et bientôt Kartino.">
+<link rel="icon" href="assets/recivo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <div class="wrap">
-  <div class="emoji">👋</div>
-  <h1>Mes applications</h1>
-  <div class="sub">Développées en indépendant — 100 % locales, sans pub, sans collecte de données.</div>
 
-  <a class="app" href="./recivo/">
-    <div class="emoji">🍽️</div>
-    <div class="name">Recivo</div>
-    <div class="desc">Tes recettes, importées d'Instagram ou d'ailleurs, organisées — planificateur, listes de courses, mode cuisine.</div>
-    <div class="links">Politique de confidentialité →</div>
-  </a>
+  <header class="top">
+    <img src="assets/recivo-icon.png" alt="">
+    <a href="./">Les apps d'Olivier</a>
+    <nav>
+      <a href="recivo/">Recivo</a>
+      <a href="mailto:app-recivo@proton.me">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Prochaines apps : dupliquer le bloc ci-dessus (ex. Kartino) -->
+  <div class="hero-home">
+    <h1>Des applications qui restent chez toi.</h1>
+    <p class="lead">Développées en indépendant, pour de vrai : gratuites, sans publicité,
+    sans compte et sans collecte de données. Ce que tu fais dans l'app reste sur ton téléphone.</p>
+  </div>
+
+  <div class="apps">
+    <a class="app-card" href="recivo/">
+      <div class="head">
+        <img src="assets/recivo-icon.png" alt="">
+        <div>
+          <h2>Recivo</h2>
+          <div class="state">Recettes · bêta Android en cours</div>
+        </div>
+      </div>
+      <p>Tes recettes, importées d'Instagram ou d'ailleurs, organisées — planificateur de semaine,
+      listes de courses, mode cuisine guidé avec minuteurs.</p>
+      <span class="go">Découvrir Recivo</span>
+    </a>
+
+    <div class="app-card soon">
+      <div class="head">
+        <div class="glyph">🃏</div>
+        <div>
+          <h2>Kartino</h2>
+          <div class="state">En cuisine…</div>
+        </div>
+      </div>
+      <p>La prochaine app est en préparation. Reviens bientôt — ou écris-moi pour être
+      prévenu de sa sortie.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Fait avec 💜 en France ·
+      <a href="recivo/confidentialite.html">Politique de confidentialité</a> ·
+      <a href="mailto:app-recivo@proton.me">app-recivo@proton.me</a> ·
+      <a href="https://paypal.me/AppRecivo">Offrir un café</a></p>
+  </footer>
+
 </div>
 </body>
 </html>
