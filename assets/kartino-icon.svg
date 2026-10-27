@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Kartino">
+  <!-- Pastille graphite arrondie, K blanc dont le fût est fait de trois barres de code-barres -->
+  <rect width="96" height="96" rx="22" fill="#18181B"/>
+  <g fill="#FFFFFF">
+    <rect x="22" y="22" width="5"  height="52" rx="1.5"/>
+    <rect x="31" y="22" width="10" height="52" rx="2"/>
+    <rect x="45" y="22" width="5"  height="52" rx="1.5"/>
+  </g>
+  <g stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M57 46 L73 26"/>
+    <path d="M57 50 L73 70"/>
+  </g>
+</svg>
